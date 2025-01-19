@@ -9,10 +9,10 @@
     <title>anarc watch</title>
     <style>
         body, #sec, #header, #menu, .text, button {
-    transition: all 0.5s ease; /* Smooth transition for all properties */
+    transition: all 0.15s ease; /* Smooth transition for all properties */
 }
 #logo {
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: opacity 0.15s ease, transform 0.15s ease;
 }
     </style>
 </head>
@@ -70,18 +70,18 @@
         var sun=document.getElementById("sun");
         menuIcon.onclick=()=>{
             menu.style.left="50%";
-            menu.style.transition="all 0.5s ease"
+            menu.style.transition="all 0.15s ease"
         }
         arrow.onclick=()=>{
             menu.style.left="100%";
-            menu.style.transition="all 0.5s ease"
+            menu.style.transition="all 0.15s ease"
         }
         moon.onclick = () => {
-    sec.style.transition = "background 0.5s ease, color 0.5s ease";
-    header.style.transition = "background 0.5s ease, color 0.5s ease";
-    menu.style.transition = "background 0.5s ease, color 0.5s ease";
-    menudiv.style.transition = "background 0.5s ease, color 0.5s ease";
-    logo.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+    sec.style.transition = "background 0.15s ease, color 0.15s ease";
+    header.style.transition = "background 0.15s ease, color 0.15s ease";
+    menu.style.transition = "background 0.15s ease, color 0.15s ease";
+    menudiv.style.transition = "background 0.15s ease, color 0.15s ease";
+    logo.style.transition = "opacity 0.15s ease, transform 0.15s ease";
     logo.style.opacity = "0";  
    // logo.style.transform = "scale(0.8)";
 
@@ -92,11 +92,11 @@
         btn.style.color = "black";
         header.style.background = "black";
         header.style.color = "white";
-        menu.style.background = "white";
-        menu.style.color = "black";
-        menudiv.style.background = "white";
-        menudiv.style.color = "black";
-        arrow.style.color = "black";
+        menu.style.background = "#171717";
+        menu.style.color = "white";
+        menudiv.style.background = "#171717";
+        menudiv.style.color = "white";
+        arrow.style.color = "white";
         logo.src = "https://i.postimg.cc/4NjHk0FD/layers-shop-logo-01-1-removebg-preview.png";
         logo.style.opacity = "1";
        // logo.style.transform = "scale(1)";
@@ -106,11 +106,11 @@
 }
 
 sun.onclick = () => {
-    sec.style.transition = "background 0.5s ease, color 0.5s ease";
-    header.style.transition = "background 0.5s ease, color 0.5s ease";
-    menu.style.transition = "background 0.5s ease, color 0.5s ease";
-    menudiv.style.transition = "background 0.5s ease, color 0.5s ease";
-    logo.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+    sec.style.transition = "background 0.15s ease, color 0.15s ease";
+    header.style.transition = "background 0.15s ease, color 0.15s ease";
+    menu.style.transition = "background 0.15s ease, color 0.15s ease";
+    menudiv.style.transition = "background 0.15s ease, color 0.15s ease";
+    logo.style.transition = "opacity 0.15s ease, transform 0.15s ease";
     logo.style.opacity = "0";  
     //logo.style.transform = "scale(0.8)";
 
