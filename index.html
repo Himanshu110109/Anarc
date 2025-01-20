@@ -70,18 +70,18 @@
         var sun=document.getElementById("sun");
         menuIcon.onclick=()=>{
             menu.style.left="50%";
-            menu.style.transition="all 0.15s ease"
+            menu.style.transition="all 0.5s ease"
         }
         arrow.onclick=()=>{
             menu.style.left="100%";
-            menu.style.transition="all 0.15s ease"
+            menu.style.transition="all 0.5s ease"
         }
         moon.onclick = () => {
     sec.style.transition = "background 0.15s ease, color 0.15s ease";
     header.style.transition = "background 0.15s ease, color 0.15s ease";
     menu.style.transition = "background 0.15s ease, color 0.15s ease";
     menudiv.style.transition = "background 0.15s ease, color 0.15s ease";
-    logo.style.transition = "opacity 0.15s ease, transform 0.15s ease";
+    logo.style.transition = "opacity 0.15s ease";
     logo.style.opacity = "0";  
    // logo.style.transform = "scale(0.8)";
 
@@ -100,7 +100,7 @@
         logo.src = "https://i.postimg.cc/4NjHk0FD/layers-shop-logo-01-1-removebg-preview.png";
         logo.style.opacity = "1";
        // logo.style.transform = "scale(1)";
-    }, 500);
+    }, 150);
     moon.style.display = "none";
     sun.style.display = "block";
 }
@@ -110,7 +110,7 @@ sun.onclick = () => {
     header.style.transition = "background 0.15s ease, color 0.15s ease";
     menu.style.transition = "background 0.15s ease, color 0.15s ease";
     menudiv.style.transition = "background 0.15s ease, color 0.15s ease";
-    logo.style.transition = "opacity 0.15s ease, transform 0.15s ease";
+    logo.style.transition = "opacity 0.15s ease";
     logo.style.opacity = "0";  
     //logo.style.transform = "scale(0.8)";
 
@@ -129,7 +129,7 @@ sun.onclick = () => {
         logo.src = "https://i.postimg.cc/P5ZptMgP/logo-removebg-preview.png"; 
         logo.style.opacity = "1";
        // logo.style.transform = "scale(1)";
-    }, 500);
+    }, 150);
 
     moon.style.display = "block";
     sun.style.display = "none";
