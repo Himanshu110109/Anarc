@@ -77,11 +77,15 @@
         var logo=document.getElementById("logo");
         var sun=document.getElementById("sun");
         var black=document.getElementById("black");
-       <!-- var link=document.querySelector("#menudiv .link");
-      
-
-        
-        
+        black.onclick=()=>{
+            menu.style.left="100%";
+            menu.style.transition="all 0.5s ease";
+            
+            black.style.opacity="0";
+            setTimeout(()=>{
+                black.style.visibility="hidden";
+            },500)
+        }
         menuIcon.onclick=()=>{
         var sec=document.getElementById("sec");
             menu.style.left="50%";
