@@ -14,11 +14,17 @@
 #logo {
     transition: opacity 0.15s ease, transform 0.15s ease;
 }
+#black{
+    transition:visibility 0.5s ease, opacity 0.5s ease;
+    visibility:hidden;
+    opacity:0;
+}
     </style>
     
     
 </head>
 <body class="scroll-smooth relative overflow-x-hidden" >
+    <div class="absolute h-[100%] w-[100%] top-0 left-0 bg-[black] z-[1] opacity-[50%] invisible" id="black"></div>
     <header class="h-[10vh] w-[100vw] flex sticky top-0 bg-[white] justify-center" id="header">
         <div class="h-[100%] w-[20vw] lg:w-[15vw] bg-[url('')]  lg:bg-left">
             <img src="https://i.postimg.cc/P5ZptMgP/logo-removebg-preview.png" alt="logo" class="h-[14vw] width-[20vw] lg:h-[8vw] lg-width-[14vw] sm:h-[10vh]" id="logo"></img>
@@ -36,7 +42,7 @@
         </div>
     </header>
     <section id="sec">
-        <div class="h-[90vh] lg:h-[90vh] lg:h-[100vh] w-[100vw] lg:bg-[url(https://i.postimg.cc/tCTX9XVt/20250119-190421-0000.png)]  sm:bg-[url(https://i.postimg.cc/tCTX9XVt/20250119-190421-0000.png)] bg-cover lg:bg-center flex items-start justify-evenly flex-col p-[7vh]">
+        <div class="h-[90vh] lg:h-[90vh] lg:h-[100vh] w-[100vw] lg:bg-[url(https://i.postimg.cc/tCTX9XVt/20250119-190421-0000.png)]  sm:bg-[] bg-cover lg:bg-center flex items-start justify-evenly flex-col p-[7vh]">
             <h3 class="text-[4vh] lg:text-[6vh] ">NEW ARRIVAL</h3>
             <h1 class="text-[7vh]  lg:text-[11vh] font-bold tracking-wider"style="font-family:'orbitron',sans-serif">ANARC<br> WATCH</h1>
             <h3 class="tracking-[0.3vw] font-medium lg:text-[1.8vh]">THE WATCH YOU WEAR EVERY<br> DAY JUST GOT SMARTER.</h3>
@@ -45,16 +51,16 @@
 
 <button class="w-[17vh] lg:w-[22vh] h-[6vh] bg-[black] text-[white] text-[1.5vh] tracking-[0.5vw] rounded-lg lg:font-bold" style="font-family:'orbitron', sans-serif;" id="btn">SHOP NOW</button>
         </div>
-        <div class="h-[42.5vh] w-[100vw] bg-[url('https://i.postimg.cc/T2mZ228z/Untitled-design.png')] bg-cover bg-center sm:hidden lg:hidden" id="imgbg"></div>
+        <div class="h-[42.5vh] w-[100vw] bg-[url('https://i.postimg.cc/T2mZ228z/Untitled-design.png')] bg-cover bg-center sm:hidden md:block lg:hidden" id="imgbg"></div>
     </section>
-    <div class="h-[100%] w-[50vw] bg-[black] fixed top-[0] left-[100%] text-[black] text-[5vw] sm:text-[3.5vw] " id="menu">
-       <div class="h-[50%] w-[100%] flex flex-col justify-between p-[4vw] bg-[black] text-[white]" style="font-family:'orbitron', sans-serif" id="menudiv">
-           <i class="ri-arrow-right-line text-white pl-[4vw] text-[6vw]" id="arrow"></i>
-       <h3 class="hover:bg-[white] hover:text-[black] w-[100%] h-[20%] flex items-center pl-[4vw] transition duration-500 w-[100%]  flex items-center pl-[4vw]">Home</h3>
-       <h3 class="hover:bg-[white] hover:text-[black] w-[100%] h-[20%] flex items-center pl-[4vw] transition duration-500">Info</h3>
-       <h3 class="hover:bg-[white] hover:text-[black] w-[100%] h-[20%] flex items-center pl-[4vw] transition duration-500">Gallery</h3>
-       <h3 class="hover:bg-[white] hover:text-[black] w-[100%] h-[20%] flex items-center pl-[4vw] transition duration-500">Contact</h3>
-       <h3 class="hover:bg-[white] hover:text-[black] w-[100%] h-[20%] flex items-center pl-[4vw] transition duration-500">Faq</h3>
+    <div class="h-[100%] w-[50vw] bg-[white] fixed top-[0] left-[100%] text-[black] text-[5vw] sm:text-[3.5vw] z-10" id="menu">
+       <div class="h-[50%] w-[100%] flex flex-col justify-between p-[4vw] bg-[white] text-[black]" style="font-family:'orbitron', sans-serif" id="menudiv">
+           <i class="ri-arrow-right-line text-black pl-[4vw] text-[6vw]" id="arrow"></i>
+       <h3 class="hover:bg-[white] hover:text-[black] w-[100%] h-[20%] flex items-center pl-[4vw] transition duration-500 w-[100%]  flex items-center pl-[4vw] link">Home</h3>
+       <h3 class="hover:bg-[white] hover:text-[black] w-[100%] h-[20%] flex items-center pl-[4vw] transition duration-500 link">Info</h3>
+       <h3 class="hover:bg-[white] hover:text-[black] w-[100%] h-[20%] flex items-center pl-[4vw] transition duration-500 link">Gallery</h3>
+       <h3 class="hover:bg-[white] hover:text-[black] w-[100%] h-[20%] flex items-center pl-[4vw] transition duration-500 link">Contact</h3>
+       <h3 class="hover:bg-[white] hover:text-[black] w-[100%] h-[20%] flex items-center pl-[4vw] transition duration-500 link">Faq</h3>
        </div>
     </div>
     
@@ -70,13 +76,27 @@
         var menudiv=document.getElementById("menudiv");
         var logo=document.getElementById("logo");
         var sun=document.getElementById("sun");
+        var black=document.getElementById("black");
+       <!-- var link=document.querySelector("#menudiv .link");
+      
+
+        
+        
         menuIcon.onclick=()=>{
+        var sec=document.getElementById("sec");
             menu.style.left="50%";
-            menu.style.transition="all 0.5s ease"
+            menu.style.transition="all 0.5s ease";
+            black.style.visibility="visible";
+            black.style.opacity="0.5";
         }
         arrow.onclick=()=>{
             menu.style.left="100%";
-            menu.style.transition="all 0.5s ease"
+            menu.style.transition="all 0.5s ease";
+            
+            black.style.opacity="0";
+            setTimeout(()=>{
+                black.style.visibility="hidden";
+            },500)
         }
         moon.onclick = () => {
     sec.style.transition = "background 0.15s ease, color 0.15s ease";
@@ -123,11 +143,11 @@ sun.onclick = () => {
         btn.style.color = "white";
         header.style.background = "white";
         header.style.color = "black";
-        menu.style.background = "black";
-        menu.style.color = "white";
-        menudiv.style.background = "black";
-        menudiv.style.color = "white";
-        arrow.style.color = "white";
+        menu.style.background = "white";
+        menu.style.color = "black";
+        menudiv.style.background = "white";
+        menudiv.style.color = "black";
+        arrow.style.color = "black";
         logo.src = "https://i.postimg.cc/P5ZptMgP/logo-removebg-preview.png"; 
         logo.style.opacity = "1";
        // logo.style.transform = "scale(1)";
@@ -136,6 +156,7 @@ sun.onclick = () => {
     moon.style.display = "block";
     sun.style.display = "none";
 }
+
     </script>
 </body>
 </html>
