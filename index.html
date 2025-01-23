@@ -17,6 +17,7 @@
     </style>
 </head>
 <body class="scroll-smooth relative overflow-x-hidden">
+    <div class="absolute top-0 left-0 h-[100vh] w-[100vw] bg-[#ffffff00] z-10 hidden" id="closediv"></div>
     <header class="h-[10vh] w-[100vw] flex sticky top-0 bg-[white] justify-center" id="header">
         <div class="h-[100%] w-[20vw] lg:w-[15vw] bg-[url('')]  lg:bg-left">
             <img src="https://i.postimg.cc/P5ZptMgP/logo-removebg-preview.png" alt="logo" class="h-[14vw] width-[20vw] lg:h-[8vw] lg-width-[14vw] sm:h-[10vh]" id="logo"></img>
@@ -42,7 +43,7 @@
         </div>
         <div class="h-[42.5vh] w-[100vw] bg-[url('https://i.postimg.cc/T2mZ228z/Untitled-design.png')] bg-cover bg-center sm:hidden md:block lg:hidden" id="imgbg"></div>
     </section>
-    <div class="h-[100vh] w-[50vw] backdrop-blur-[15px] bg-[#ffffff00] fixed top-[0] left-[100%] text-[black] text-[5vw] sm:text-[3.5vw] z-10 shadow-2xl" id="menu">
+    <div class="h-[100vh] w-[50vw] backdrop-blur-[15px] bg-[#ffffff00] fixed top-[0] left-[100%] text-[black] text-[5vw] sm:text-[3.5vw] z-20 shadow-2xl" id="menu">
         <div class="h-[50%] w-[100%] flex flex-col justify-between p-[4vw] backdrop-blur-lg bg-[#ffffff00] text-[black]" style="font-family:'orbitron', sans-serif" id="menudiv">
             <i class="ri-arrow-right-line text-black pl-[4vw] text-[6vw]" id="arrow"></i>
             <h3 class="hover:bg-[black] hover:text-[white] w-[100%] h-[20%] flex items-center pl-[4vw] transition duration-500 link">Home</h3>
@@ -65,14 +66,22 @@
         var menudiv = document.getElementById("menudiv");
         var logo = document.getElementById("logo");
         var sun = document.getElementById("sun");
+        var closediv = document.getElementById("closediv");
+        closediv.onclick=()=>{
+            menu.style.left = "100%";
+            menu.style.transition = "all 0.5s ease";
+            closediv.style.display="none";
+        }
 
         menuIcon.onclick = () => {
             menu.style.left = "50%";
             menu.style.transition = "all 0.5s ease";
+            closediv.style.display="block";
         };
         arrow.onclick = () => {
             menu.style.left = "100%";
             menu.style.transition = "all 0.5s ease";
+            closediv.style.display="none";
         };
         moon.onclick = () => {
             sec.style.transition = "background 0.15s ease, color 0.15s ease";
