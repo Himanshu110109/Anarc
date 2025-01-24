@@ -6,6 +6,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>anarc watch</title>
     <style>
         body, #sec, #header, #menu, .text, button {
@@ -33,15 +34,31 @@
             <i class="ri-menu-3-line lg:hidden" id="menu-icon"></i>
         </div>
     </header>
-    <section id="sec">
-        <div class="h-[90vh] lg:h-[90vh] lg:h-[100vh] w-[100vw] lg:bg-[url(https://i.postimg.cc/tCTX9XVt/20250119-190421-0000.png)] bg-cover lg:bg-center flex items-start justify-evenly flex-col p-[7vh]">
+    <section id="sec" class="lg:flex">
+        <div class="h-[90vh] lg:h-[90vh] lg:h-[100vh] w-[100vw] lg:w-[50%] bg-[] bg-cover lg:bg-center flex items-start justify-evenly flex-col p-[7vh]">
             <h3 class="text-[4vh] lg:text-[6vh]">NEW ARRIVAL</h3>
             <h1 class="text-[7vh] lg:text-[11vh] font-bold tracking-wider" style="font-family:'orbitron',sans-serif">ANARC<br> WATCH</h1>
             <h3 class="tracking-[0.3vw] font-medium lg:text-[1.8vh]">THE WATCH YOU WEAR EVERY<br> DAY JUST GOT SMARTER.</h3>
             <h5 class="w-[100%] lg:w-[27%] font-light lg:text-[1.5vh] lg:tracking-[0.13vw] lg:mb-[4vh] sm:w-[40%]">Stay connected and track your health. Designed for comfort and performance, it keeps you ahead in every moment of your day.</h5>
             <button class="w-[17vh] lg:w-[22vh] h-[6vh] bg-[black] text-[white] text-[1.5vh] tracking-[0.5vw] rounded-lg lg:font-bold" style="font-family:'orbitron', sans-serif;" id="btn">SHOP NOW</button>
         </div>
-        <div class="h-[42.5vh] w-[100vw] bg-[url('https://i.postimg.cc/T2mZ228z/Untitled-design.png')] bg-cover bg-center sm:hidden md:block lg:hidden" id="imgbg"></div>
+        <div class="h-[42.5vh] lg:h-[90vh] w-[100vw] lg:w-[50%] bg-[] bg-cover bg-center md:block lg:flex lg:items-center" id="imgbg">
+            <div class="carousel-container">
+            <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="photo2.png" class="d-block  h-[100%] lg:w-[1000px] lg:h-[500px] w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="photo1.png" class="d-block  lg:w-[1000px] lg:h-[500px] w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="photo00.png" class="d-block  lg:w-[1000px] lg:h-[500px] w-100" alt="...">
+    </div>
+  </div>
+</div>
+</div>
+        </div>
     </section>
     <div class="h-[100vh] w-[50vw] backdrop-blur-[15px] bg-[#ffffff00] fixed top-[0] left-[100%] text-[black] text-[5vw] sm:text-[3.5vw] z-20 shadow-2xl" id="menu">
         <div class="h-[50%] w-[100%] flex flex-col justify-between p-[4vw] backdrop-blur-lg bg-[#ffffff00] text-[black]" style="font-family:'orbitron', sans-serif" id="menudiv">
@@ -54,6 +71,8 @@
         </div>
     </div>
     
+    
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script>
         var menuIcon = document.getElementById("menu-icon");
         var menu = document.getElementById("menu");
