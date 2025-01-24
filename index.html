@@ -15,6 +15,15 @@
         #logo {
             transition: opacity 0.15s ease, transform 0.15s ease;
         }
+        #photo{
+            transition: all 0.5s ease;
+        }
+        @media(min-width:1000px){
+            #photo{
+                width:1000px;
+                
+            }
+        }
     </style>
 </head>
 <body class="scroll-smooth relative overflow-x-hidden">
@@ -28,7 +37,7 @@
             <h3 class="hidden lg:block lg:ml-[3vw]">Info</h3>
             <h3 class="hidden lg:block lg:ml-[3vw]">Gallery</h3>
             <h3 class="hidden lg:block lg:ml-[3vw]">Contact</h3>
-            <h3 class="hidden lg:block lg:ml-[3vw]">Faq</h3>
+            <h3 class="hidden lg:block  lg:ml-[3vw]">Faq</h3>
             <i class="ri-moon-line mr-[3vw] ml-[3vw]" id="moon"></i>
             <i class="ri-sun-line hidden mr-[3vw] ml-[3vw]" id="sun"></i>
             <i class="ri-menu-3-line lg:hidden" id="menu-icon"></i>
@@ -42,18 +51,18 @@
             <h5 class="w-[100%] lg:w-[27%] font-light lg:text-[1.5vh] lg:tracking-[0.13vw] lg:mb-[4vh] sm:w-[40%]">Stay connected and track your health. Designed for comfort and performance, it keeps you ahead in every moment of your day.</h5>
             <button class="w-[17vh] lg:w-[22vh] h-[6vh] bg-[black] text-[white] text-[1.5vh] tracking-[0.5vw] rounded-lg lg:font-bold" style="font-family:'orbitron', sans-serif;" id="btn">SHOP NOW</button>
         </div>
-        <div class="h-[42.5vh] lg:h-[90vh] w-[100vw] lg:w-[50%] bg-[] bg-cover bg-center md:block lg:flex lg:items-center" id="imgbg">
+        <div class="h-[70vh] lg:h-[90vh] w-[100vw] lg:w-[50%] bg-[] bg-cover bg-center md:block lg:flex lg:items-center" id="imgbg">
             <div class="carousel-container">
-            <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://i.postimg.cc/3RZfX3xN/photo2.png" class="d-block  h-[100%] lg:w-[1000px] lg:h-[500px] w-100" alt="...">
+      <img src="https://i.postimg.cc/3RZfX3xN/photo2.png" class="d-block" alt="..." id="photo">
     </div>
     <div class="carousel-item">
-      <img src="https://i.postimg.cc/25hK5Qp4/photo1.png" class="d-block  lg:w-[1000px] lg:h-[500px] w-100" alt="...">
+      <img src="https://i.postimg.cc/25hK5Qp4/photo1.png" class="d-block" alt="..." id="photo">
     </div>
     <div class="carousel-item">
-      <img src="https://i.postimg.cc/Bn8zrWM7/photo00.png" class="d-block  lg:w-[1000px] lg:h-[500px] w-100" alt="...">
+      <img src="https://i.postimg.cc/Bn8zrWM7/photo00.png" class="d-block" alt="..." id="photo">
     </div>
   </div>
 </div>
@@ -86,6 +95,7 @@
         var logo = document.getElementById("logo");
         var sun = document.getElementById("sun");
         var closediv = document.getElementById("closediv");
+        var photo = document.getElementById("photo");
         closediv.onclick=()=>{
             menu.style.left = "100%";
             menu.style.transition = "all 0.5s ease";
